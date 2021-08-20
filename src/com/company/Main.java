@@ -6,6 +6,8 @@ public class Main {
         LinkedList personas = new LinkedList();
 
         personas.agregar("Fernando");
+        personas.addEnPosicion(0, "Texto 2");
+        personas.deleteLast();
         personas.size();
         personas.getTodo();
 
