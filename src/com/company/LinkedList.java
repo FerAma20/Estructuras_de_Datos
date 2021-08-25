@@ -20,6 +20,7 @@ public class LinkedList {
 
 
             last.next=newNodo;
+            newNodo.prev = last;
             last = newNodo;
 
 
@@ -34,6 +35,7 @@ public class LinkedList {
             last = newNodo;
         }else{
             newNodo.next = first;
+            first.prev=newNodo;
             first = newNodo;
         }
 
@@ -54,6 +56,7 @@ public class LinkedList {
                         Nodo newNodo = new Nodo(mensaje);
                         newNodo.next = current.next;
                         newNodo.prev=current;
+                        current.next.prev = newNodo;
 
                         current.next = newNodo;
                     }
@@ -130,7 +133,18 @@ public class LinkedList {
     public void getTodo(){
         Nodo current= first;
         while(current!=null){
-            System.out.println(current.value);
+            if (current.prev == null) {
+                System.out.println("Anterior: Null" );
+            }else{
+                System.out.println("Anterior: " + current.prev.value);
+            }
+            System.out.println("Valor: " + current.value);
+            if(current.next==null){
+                System.out.println("Siguiente: Null");
+            }else{
+                System.out.println("Siguiente: " + current.next.value);
+            }
+
             current= current.next;
         }
     }

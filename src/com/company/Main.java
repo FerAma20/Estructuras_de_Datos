@@ -7,7 +7,8 @@ public class Main {
 
         personas.agregar("Fernando");
         personas.addEnPosicion(0, "Texto 2");
-        personas.deleteLast();
+        personas.agregar("Escobar");
+        //personas.deleteLast();
         personas.size();
         personas.getTodo();
 
