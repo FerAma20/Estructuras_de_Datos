@@ -28,7 +28,7 @@ public class Cola {
     public void get(){
         Nodo current = first;
         while(current != null){
-            System.out.println("n"+current.value);
+            System.out.println(current.value);
             current = current.next;
         }
     }
