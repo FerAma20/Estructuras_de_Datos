@@ -66,15 +66,15 @@ public class Main {
         System.out.println("\n=============== ArrayList ===============\n");
 
         al.add(3);
-        al.getAll();
         al.add(5);
-        al.getAll();
         al.add(6);
-        al.getAll();
-        al.size();
-        al.clear();
-        al.getAll();
-        al.size();
+        Integer[] inn= al.get();
+        for(int i = 0; i< al.size();i++){
+            System.out.println(inn[i] + ", ");
+        }
+        System.out.println("La longitud del ArrayList es de: " + al.size());
+
+        System.out.println("La longitud del ArrayList es de: " + al.size());
 
     }
 }
