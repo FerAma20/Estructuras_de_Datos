@@ -7,6 +7,7 @@ public class Main {
         Pila pl = new Pila();
         Cola cl = new Cola();
         List ls = new List();
+        ArrayList al = new ArrayList();
 
         System.out.println("\n=============== LinkedList ===============\n");
 
@@ -61,6 +62,19 @@ public class Main {
         ls.delete();
         ls.getAll();
 
+
+        System.out.println("\n=============== ArrayList ===============\n");
+
+        al.add(3);
+        al.getAll();
+        al.add(5);
+        al.getAll();
+        al.add(6);
+        al.getAll();
+        al.size();
+        al.clear();
+        al.getAll();
+        al.size();
 
     }
 }
