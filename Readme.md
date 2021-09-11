@@ -21,3 +21,9 @@ Creacion de estructura List, con funcion de agregar, obtener y eliminar.
 
 ![Screen Shot 2021-09-08 at 10 37 53 PM](https://user-images.githubusercontent.com/62443757/132623379-cf9aa371-8510-4e1d-896f-3a6e3883423c.png)
 
+# ArrayList
+
+Creacion de estructura ArrayList, con funcion de agregar, remover, vaciar, mostrar los datos del ArrayList, mostrar su longitud.
+
+![Screen Shot 2021-09-10 at 9 17 35 PM](https://user-images.githubusercontent.com/62443757/132934498-26fb2b16-e064-449d-85ed-9d356fcba917.png)
+
