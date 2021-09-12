@@ -7,7 +7,8 @@ public class Main {
         Pila pl = new Pila();
         Cola cl = new Cola();
         List ls = new List();
-        ArrayList al = new ArrayList();
+        ArrayList<String> al = new ArrayList(String.class);
+        ArrayList<Integer> al2 = new ArrayList<>(Integer.class);
 
         System.out.println("\n=============== LinkedList ===============\n");
 
@@ -16,7 +17,6 @@ public class Main {
         personas.agregar("Fernando");
         personas.addEnPosicion(0, "Texto 2");
         personas.agregar("Escobar");
-        //personas.deleteLast();
         personas.size();
         personas.getTodo();
 
@@ -65,16 +65,31 @@ public class Main {
 
         System.out.println("\n=============== ArrayList ===============\n");
 
-        al.add(3);
-        al.add(5);
-        al.add(6);
-        Integer[] inn= al.get();
+
+        System.out.println(al.size());
+        al.add("Fernando");
+        al.add("Amado");
+        al.add("Escobar");
+        al.add("Perez");
+        System.out.println(al.size());
+        al.addId(1,"Valor Extra");
+        System.out.println(al.size());
+        al.addId(4,"Valor Extra");
+        System.out.println(al.size());
+
+        al.removeId(1);
+        Object[] inn= al.get();
         for(int i = 0; i< al.size();i++){
             System.out.println(inn[i] + ", ");
         }
-        System.out.println("La longitud del ArrayList es de: " + al.size());
+        System.out.println(al.size());
 
-        System.out.println("La longitud del ArrayList es de: " + al.size());
+        al.clear();
+        System.out.println(al.size());
+        al.add("Nuevo valor");
+        al.add("Nuevo valor");
+        al.add("Nuevo valor");
+        System.out.println(al.size());
 
     }
 }
