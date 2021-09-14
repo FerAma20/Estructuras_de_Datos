@@ -7,8 +7,7 @@ public class Main {
         Pila pl = new Pila();
         Cola cl = new Cola();
         List ls = new List();
-        ArrayList<String> al = new ArrayList(String.class);
-        ArrayList<Integer> al2 = new ArrayList<>(Integer.class);
+        ArrayList al = new ArrayList();
 
         System.out.println("\n=============== LinkedList ===============\n");
 
@@ -66,10 +65,11 @@ public class Main {
         System.out.println("\n=============== ArrayList ===============\n");
 
 
+        //System.out.println("Arreglo" + al.arreglo.length + " " + al.arreglo.getClass());
         System.out.println(al.size());
         al.add("Fernando");
-        al.add("Amado");
-        al.add("Escobar");
+        al.add(true);
+        al.add(5);
         al.add("Perez");
         System.out.println(al.size());
         al.addId(1,"Valor Extra");

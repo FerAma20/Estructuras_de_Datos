@@ -4,12 +4,13 @@ import java.lang.reflect.Array;
 import java.util.Arrays;
 
 public class ArrayList<T>{
-    T[] array;
-    Class<T> clazz;
+    //T[] array;
+    //Class<T> clazz;
+    Object[] array ={};
 
-    public ArrayList(Class<T> clazz){
-        this.clazz=clazz;
-        array = (T[]) Array.newInstance(clazz, 0);
+    public ArrayList(){ //Class<T> clazz
+       // this.clazz=clazz;
+       // array = (T[]) Array.newInstance(clazz, 0);
     }
 
     public void add(T val){
@@ -31,6 +32,7 @@ public class ArrayList<T>{
 
     public void remove(){
         array = Arrays.copyOfRange(array, 0, array.length-1);
+
     }
 
     public void removeId(int id){
@@ -41,14 +43,15 @@ public class ArrayList<T>{
     }
 
     public void clear(){
-           array = (T[]) Array.newInstance(this.clazz, 0);
+        //array = (T[]) Array.newInstance(this.clazz, 0);
+        array = new Object[]{};
     }
 
     public int size(){
         return array.length;
     }
 
-    public T[] get(){
+    public Object[] get(){
         return array;
     }
 }
