@@ -5,7 +5,6 @@ public class ArrayList<T>{
     Object[] array;
 
     public ArrayList(int capacity){
-
         if(capacity>0){
             array = new Object[capacity];
         }else{
@@ -22,7 +21,6 @@ public class ArrayList<T>{
 
     public void add(int position, T val){
         Object[] array2 = new Object[array.length+1];
-
         if(array.length==0){
             array2[0]=val;
             array=array2;
@@ -41,7 +39,6 @@ public class ArrayList<T>{
     }
 
     public void remove(){
-
         Object[] array2 = new Object[array.length-1];
         for(int i =0; i<array2.length;i++){
             array2[i]=array[i];
@@ -50,10 +47,15 @@ public class ArrayList<T>{
     }
 
     public void remove(int id){
-        for(int i = id; i<= array.length-2;i++){
-            array[i]=array[i+1];
+        if(id >= 0 && id< array.length){
+            for(int i = id; i<= array.length-2;i++){
+                array[i]=array[i+1];
+            }
+            remove();
+        }else{
+            System.out.println("Id ingresado no valido");
         }
-        remove();
+
     }
 
     public void clear(){

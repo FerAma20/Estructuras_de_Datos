@@ -66,7 +66,7 @@ public class Main {
         System.out.println(al);
         al.remove();
         System.out.println(al);
-        al.remove(2);
+        al.remove(3);
         System.out.println(al);
 
     }
