@@ -3,14 +3,9 @@ package com.company;
 public class Main {
 
     public static void main(String[] args) {
-        LinkedList personas = new LinkedList();
-        Pila pl = new Pila();
-        Cola cl = new Cola();
-        List ls = new List();
-        ArrayList al = new ArrayList();
 
         System.out.println("\n=============== LinkedList ===============\n");
-
+        LinkedList personas = new LinkedList();
         // Ejemplos de LinkedList
 
         personas.agregar("Fernando");
@@ -21,7 +16,7 @@ public class Main {
 
 
         System.out.println("\n=============== Pila ===============\n");
-
+        Pila pl = new Pila();
         // Ejemplos de Pila
 
         pl.push("Mensaje 1");
@@ -37,8 +32,7 @@ public class Main {
 
 
         System.out.println("\n=============== Cola ===============\n");
-
-
+        Cola cl = new Cola();
         // Ejemplos cola
         cl.push("Primer Valor");
         cl.push("Segundo Valor");
@@ -49,7 +43,7 @@ public class Main {
         cl.get();
 
         System.out.println("\n=============== List ===============\n");
-
+        List ls = new List();
         //Ejemplos List
         ls.add("Primer dato");
         ls.add("Segundo dato");
@@ -63,33 +57,17 @@ public class Main {
 
 
         System.out.println("\n=============== ArrayList ===============\n");
-
-
-        //System.out.println("Arreglo" + al.arreglo.length + " " + al.arreglo.getClass());
-        System.out.println(al.size());
-        al.add("Fernando");
-        al.add(true);
-        al.add(5);
-        al.add("Perez");
-        System.out.println(al.size());
-        al.addId(1,"Valor Extra");
-        System.out.println(al.size());
-        al.addId(4,"Valor Extra");
-        System.out.println(al.size());
-
-        al.removeId(1);
-        Object[] inn= al.get();
-        for(int i = 0; i< al.size();i++){
-            System.out.println(inn[i] + ", ");
-        }
-        System.out.println(al.size());
-
-        al.clear();
-        System.out.println(al.size());
-        al.add("Nuevo valor");
-        al.add("Nuevo valor");
-        al.add("Nuevo valor");
-        System.out.println(al.size());
+        ArrayList<String> al = new ArrayList<>(0);
+        al.add("23");
+        al.add("Segundo texto");
+        al.add("true");
+        al.add("Cuarto texto");
+        al.add("Quiento texto");
+        System.out.println(al);
+        al.remove();
+        System.out.println(al);
+        al.remove(2);
+        System.out.println(al);
 
     }
 }

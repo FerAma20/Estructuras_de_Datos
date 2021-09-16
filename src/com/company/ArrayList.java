@@ -1,41 +1,55 @@
 package com.company;
 
-import java.lang.reflect.Array;
-import java.util.Arrays;
-
 public class ArrayList<T>{
-    //T[] array;
-    //Class<T> clazz;
-    Object[] array ={};
+    static Object[] defoultCapacity = {};
+    Object[] array;
 
-    public ArrayList(){ //Class<T> clazz
-       // this.clazz=clazz;
-       // array = (T[]) Array.newInstance(clazz, 0);
+    public ArrayList(int capacity){
+
+        if(capacity>0){
+            array = new Object[capacity];
+        }else{
+            array = defoultCapacity;
+        }
+    }
+    public ArrayList(){
+        array = defoultCapacity;
     }
 
     public void add(T val){
-        array = Arrays.copyOf(array, array.length+1);
-        array[array.length-1]=val;
+        add(array.length, val);
     }
 
-    public void addId(int id, T val){
-        array = Arrays.copyOf(array, array.length+1);
-        for(int i = array.length-1;i>=id;i--){
-            if(i==id){
-                array[i]= val;
-                break;
+    public void add(int position, T val){
+        Object[] array2 = new Object[array.length+1];
+
+        if(array.length==0){
+            array2[0]=val;
+            array=array2;
+            return;
+        }
+        for(int i = 0;i<array2.length;i++){
+            if(i<position){
+                array2[i]= array[i];
+            }else if(i == position){
+                array2[i]= val;
             }else{
-                array[i]= array[i-1];
+                array2[i]=array[i-1];
             }
         }
+        array = array2;
     }
 
     public void remove(){
-        array = Arrays.copyOfRange(array, 0, array.length-1);
 
+        Object[] array2 = new Object[array.length-1];
+        for(int i =0; i<array2.length;i++){
+            array2[i]=array[i];
+        }
+        array=array2;
     }
 
-    public void removeId(int id){
+    public void remove(int id){
         for(int i = id; i<= array.length-2;i++){
             array[i]=array[i+1];
         }
@@ -43,7 +57,6 @@ public class ArrayList<T>{
     }
 
     public void clear(){
-        //array = (T[]) Array.newInstance(this.clazz, 0);
         array = new Object[]{};
     }
 
@@ -53,5 +66,14 @@ public class ArrayList<T>{
 
     public Object[] get(){
         return array;
+    }
+
+    @Override
+    public String toString() {
+        String output = "";
+        for(int i=0; i<array.length;i++){
+            output +=array[i] + " ";
+        }
+        return output;
     }
 }
