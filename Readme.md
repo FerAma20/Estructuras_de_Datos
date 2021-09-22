@@ -1,9 +1,4 @@
-# Estructura de Datos
-
-## LinkedList 
-Creacion de estructura List con funciones de obtener elemento, agregar, eliminar, obtener tamano de lista.
-
-![Screen Shot 2021-08-26 at 7 07 17 PM](https://user-images.githubusercontent.com/62443757/131055497-ba8fc536-5ec2-4828-88cf-23e76bd9ef51.png)
+# Data structures
 
 ## Pila
 
@@ -23,7 +18,11 @@ Creacion de estructura List, con funcion de agregar, obtener y eliminar.
 
 ## ArrayList
 
-Creacion de estructura ArrayList, con funcion de agregar, remover, vaciar, mostrar los datos del ArrayList, mostrar su longitud.
+It is a class that allows data to be stored in memory in a similar way to Arrays, with the advantage that the number of elements it stores does so dynamically, that is, it is not necessary to declare their size as happens with Arrays..
 
 ![Screen Shot 2021-09-10 at 9 17 35 PM](https://user-images.githubusercontent.com/62443757/132934498-26fb2b16-e064-449d-85ed-9d356fcba917.png)
 
+## LinkedList 
+Creacion de estructura List con funciones de obtener elemento, agregar, eliminar, obtener tamano de lista.
+
+![Screen Shot 2021-08-26 at 7 07 17 PM](https://user-images.githubusercontent.com/62443757/131055497-ba8fc536-5ec2-4828-88cf-23e76bd9ef51.png)
